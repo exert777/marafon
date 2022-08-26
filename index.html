@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
 
@@ -37,64 +40,77 @@
     <main>
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
-        <div class="cantainer-l about-us-container">
+        <div class="container-l about-us-container">
           <img
             src="images/about-us-img.jpg"
             alt="Сервировка стола"
             class="about-us-img"
           />
-          <p class="about-us-text">
-            Премиальный европейский текстиль — одно из самых главных направлений
-            работы коллектива. Создавать неповторимые интерьеры для наших
-            дорогих клиентов, уделяя внимание мельчайшим деталям — вот то, что
-            по-настоящему вдохновляет дизайнеров нашей студии.
-          </p>
-          <p class="about-us-text">
-            Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам
-            было приятно сказать: « Да! Это именно то, что действительно
-            достойно моего дома!»
-          </p>
+          <div class="about-us-text">
+            <p >
+              Премиальный европейский текстиль — одно из самых главных направлений
+              работы коллектива. Создавать неповторимые интерьеры для наших
+              дорогих клиентов, уделяя внимание мельчайшим деталям — вот то, что
+              по-настоящему вдохновляет дизайнеров нашей студии.
+            </p>
+            <p>
+              Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам
+              было приятно сказать: « Да! Это именно то, что действительно
+              достойно моего дома!»
+            </p>
+          </div>
         </div>
-        <ul class="about-us-stat">
-          <li><span>5</span>лет опыта</li>
-          <li><span>100</span>проектов</li>
-          <li><span>10</span>наград</li>
-        </ul>
+        <div class="about-us-stat">
+          <ul class="about-us-stat-list container-l">
+            <li class="about-us-stat-list-item"><p>5</p><p>лет опыта</p></li>
+            <li class="about-us-stat-list-item"><p>100</p><p>проектов</p></li>
+            <li class="about-us-stat-list-item"><p>10</p><p>наград</p></li>
+          </ul>
+        </div>
       </section>
       <section class="our-project">
-        <h2 class="our-project-title">Наши работы</h2>
-        <div class="container-b">
+        
+        <div class="our-project-container container-b">
+          <h2 class="our-project-title">Наши работы</h2>
           <div class="our-project-image-box">
-            <img
-              src="images/our-project-pic1.png"
-              alt="Спальня в теплых тонах"
-              class="our-project-image"
-              width="488"
-              height="451"
-            />
-            <img
-              src="images/our-project-pic2.jpg"
-              alt="Кухня в стиле лофт"
-              class="our-project-image"
-              width="692"
-              height="451"
-            />
+            <div>
+              <img
+                src="images/our-project-pic1.png"
+                alt="Спальня в теплых тонах"
+                class="our-project-image"
+                width="488"
+                height="451"
+              />
+            </div>
+            <div>
+              <img
+                src="images/our-project-pic2.jpg"
+                alt="Кухня в стиле лофт"
+                class="our-project-image"
+                width="692"
+                height="451"
+              />
+            </div>
           </div>
           <div class="our-project-image-box">
-            <img
-              src="images/our-project-pic3.jpg"
-              alt="Светлая комната с тахтой и журнальным столиком"
-              class="our-project-image"
-              width="692"
-              height="451"
-            />
-            <img
-              src="images/our-project-pic4.jpg"
-              alt="Ванна из цельного камня"
-              class="our-project-image"
-              width="488"
-              height="451"
-            />
+            <div>
+              <img
+                src="images/our-project-pic3.jpg"
+                alt="Светлая комната с тахтой и журнальным столиком"
+                class="our-project-image"
+                width="692"
+                height="451"
+              />
+            </div>
+            <div>
+              <img
+                src="images/our-project-pic4.jpg"
+                alt="Ванна из цельного камня"
+                class="our-project-image"
+                width="488"
+                height="451"
+              />
+            </div>
           </div>
           <a href="#" class="our-project-see-more">Смотреть еще</a>
         </div>
