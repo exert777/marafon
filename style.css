@@ -201,22 +201,273 @@ header {
   display: block;
 }
 
-.our-project-image-box div {
+.image-container {
   position: relative;
   transition: 1.5s;
+  z-index: 1;
 }
 
-.our-project-image-box div:hover:before {
-  content: "";
+.hover-block {
   position: absolute;
   top: 0;
-  bottom: 0;
+  left: 0;
   display: block;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background: rgba(100, 72, 69, 0.8);
+  visibility: hidden;
+  padding: 86px 0 122px 0;
+}
+
+.hover-block h3 {
+  width: 270px;
+  margin: 0 auto 30px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hover-block p {
+  width: 410px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.image-container:hover .hover-block {
+  visibility: visible;
 }
 
 .our-project-image-box:not(:last-of-type) {
   margin: 0 0 30px 0;
+}
+
+.our-project-image-box:last-of-type {
+  margin: 0 0 40px 0;
+}
+
+.our-project-see-more {
+  position: relative;
+  border: none;
+  outline: none;
+  background: rgba(250, 249, 249, 0);
+  display: block;
+  width: 295px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0 auto;
+}
+
+.our-project-see-more:focus {
+  cursor: pointer;
+}
+
+.our-project-see-more::after {
+  content: url(images/Arrow\ 3.svg);
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 60px);
+}
+
+/* ----our-team----- */
+
+.our-team {
+  padding: 50px 0 80px 0;
+  background: #e2c4ba;
+}
+
+.our-team-container {
+  margin: 0 auto;
+}
+
+.our-team-container h2 {
+  width: 225px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0 auto 42px;
+  text-transform: uppercase;
+}
+
+.our-team-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 35px 0;
+}
+
+.our-team-list li {
+  width: 320px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.team-work-container {
+  margin: 0 auto;
+}
+
+.team-work-container h2 {
+  width: 420px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.team-work {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-work li {
+  width: 285px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.team-work span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  background: #8d7370;
+  border-radius: 50%;
+}
+
+/* ----review---- */
+
+.review {
+  background: #efe6e4;
+  padding: 65px 0 65px 0;
+}
+
+.review h2 {
+  width: 190px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin: 0 auto 40px;
+}
+
+.review-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 835px;
+}
+
+.review-text-box {
+  width: 405px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-text-box p:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+
+.review-image-box {
+  width: 405px;
+}
+
+.review-image-box img {
+  display: block;
+}
+
+.review-image-box img:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+
+/* ---request---- */
+
+.request {
+  background: #8d7370;
+}
+
+.request-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.request-form {
+  width: 510px;
+  padding: 50px 0 186px 0;
+}
+
+.request-form h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 0 0 25px 0;
+}
+
+.request-form p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 0 0 45px 0;
+}
+
+.request-form input {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+}
+
+.request-form input:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+
+.request-form button {
+  outline: none;
+  border: none;
+  background: #cc8b86;
+  padding: 25px 0 25px 0;
+  width: 310px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+footer {
+  background: #e5e5e5;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+  padding: 37px 0;
+  margin: 0 auto;
 }
