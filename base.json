@@ -1,0 +1,30 @@
+{
+  "img-1": {
+    "src": "images/our-project-pic1.png",
+    "alt": "Спальня в теплых тонах",
+    "class": "our-project-image",
+    "width": "488",
+    "height": "451"
+  },
+  "img-2": {
+    "src": "images/our-project-pic2.jpg",
+    "alt": "Кухня в стиле лофт",
+    "class": "our-project-image",
+    "width": "692",
+    "height": "451"
+  },
+  "img-3": {
+    "src": "images/our-project-pic3.jpg",
+    "alt": "Светлая комната с тахтой и журнальным столиком",
+    "class": "our-project-image",
+    "width": "692",
+    "height": "451"
+  },
+  "img-4": {
+    "src": "images/our-project-pic4.jpg",
+    "alt": "Ванна из цельного камня",
+    "class": "our-project-image",
+    "width": "488",
+    "height": "451"
+  }
+}
