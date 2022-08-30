@@ -377,27 +377,35 @@ header {
   width: 835px;
 }
 
-.review-container::after {
-  content: url(images/Arrow\ 2.svg);
-  height: 32px;
+.arrow-right {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 50px;
   position: absolute;
   top: 50%;
   right: -90px;
   border-radius: 50%;
-  background: #cc8b86;
+  background: center / 70% no-repeat url(images/Arrow\ 2.svg) #cc8b86;
   padding: 10px;
   display: flex;
   cursor: pointer;
 }
 
-.review-container::before {
-  content: url(images/Arrow\ 2.svg);
-  height: 32px;
+.arrow-right:hover {
+  background-color: #fefefe;
+}
+
+.arrow-left {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 50px;
   position: absolute;
   top: 50%;
   left: -90px;
   border-radius: 50%;
-  background: #cc8b86;
+  background: center / 70% no-repeat url(images/Arrow\ 2.svg) #cc8b86;
   padding: 10px;
   display: flex;
   transform: rotate(-180deg);

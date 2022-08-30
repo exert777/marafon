@@ -3,12 +3,39 @@
 let projctIamgeBox = document.querySelectorAll(".our-project-image-box");
 let projctContainer = document.querySelector(".our-project-container");
 let seeMore = document.querySelector(".our-project-see-more");
+let counter = 0;
 
-let obj_one;
+let btnRight = document.querySelector(".arrow-right");
+let btnLeft = document.querySelector(".arrow-left");
 
-console.log(obj_one);
+/* По клику на кнопку запускается счетчик кликов
+Если значение счетчика четное, то алгоритм берет
+значение из первого объекта массива порядков order, если 
+не четное то из второго объекта */
 
 seeMore.addEventListener("click", (event) => {
+  /* Порядок комбинации картинок в projctImageBox
+Либо четвартая картинка в одном боксе со второй
+либо первая с третьей */
+  let order = [
+    {
+      1: "1",
+      2: "3",
+    },
+    {
+      1: "2",
+      2: "4",
+    },
+  ];
+  let firstImage, secondImage;
+
+  if (counter % 2 == 0) {
+    firstImage = Object.values(order[0])[0];
+    secondImage = Object.values(order[0])[1];
+  } else {
+    firstImage = Object.values(order[1])[0];
+    secondImage = Object.values(order[1])[1];
+  }
   fetch("base.json")
     .then((response) => response.json())
     .then((data) => {
@@ -24,11 +51,11 @@ seeMore.addEventListener("click", (event) => {
             </p>
           </div>
           <img
-            src="${data["img-2"].src}"
-            alt="Светлая комната с тахтой и журнальным столиком"
-            class="our-project-image"
-            width="692"
-            height="451"
+            src="${data[`img-${firstImage}`].src}"
+            alt="${data[`img-${firstImage}`].alt}"
+            class="${data[`img-${firstImage}`].class}"
+            width="${data[`img-${firstImage}`].width}"
+            height="${data[`img-${firstImage}`].height}"
           />
         </div>
         <div class="image-container">
@@ -41,15 +68,16 @@ seeMore.addEventListener("click", (event) => {
             </p>
           </div>
           <img
-            src="${data["img-4"].src}"
-            alt="Ванна из цельного камня"
-            class="our-project-image"
-            width="488"
-            height="451"
+          src="${data[`img-${secondImage}`].src}"
+          alt="${data[`img-${secondImage}`].alt}"
+          class="${data[`img-${secondImage}`].class}"
+          width="${data[`img-${secondImage}`].width}"
+          height="${data[`img-${secondImage}`].height}"
           />
         </div>
       </div>
                     `;
       projctContainer.insertAdjacentHTML("beforeend", image);
     });
+  counter = counter + 1;
 });
