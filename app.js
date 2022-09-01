@@ -7,6 +7,8 @@ let counter = 0;
 
 let btnRight = document.querySelector(".arrow-right");
 let btnLeft = document.querySelector(".arrow-left");
+let cardNode = document.querySelectorAll(".review-card");
+let cardArray = [...cardNode];
 
 /* По клику на кнопку запускается счетчик кликов
 Если значение счетчика четное, то алгоритм берет
@@ -80,4 +82,20 @@ seeMore.addEventListener("click", (event) => {
       projctContainer.insertAdjacentHTML("beforeend", image);
     });
   counter = counter + 1;
+});
+
+btnRight.addEventListener("click", (event) => {
+  let currentCard;
+  cardArray.forEach((el) => {
+    if (el.hidden === false) {
+      currentCard = cardArray.indexOf(el);
+    }
+  });
+  cardArray[currentCard].hidden = true;
+  if (currentCard != cardArray.length - 1) {
+    cardArray[currentCard + 1].hidden = false;
+  } else {
+    currentCard = 0;
+    cardArray[currentCard].hidden = false;
+  }
 });
