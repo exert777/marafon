@@ -10,6 +10,9 @@ let btnLeft = document.querySelector(".arrow-left");
 let cardNode = document.querySelectorAll(".review-card");
 let cardArray = [...cardNode];
 
+let btnBurger = document.querySelector(".burger-nav");
+let navList = document.querySelector(".nav-list");
+
 /* По клику на кнопку запускается счетчик кликов
 Если значение счетчика четное, то алгоритм берет
 значение из первого объекта массива порядков order, если 
@@ -84,6 +87,8 @@ seeMore.addEventListener("click", (event) => {
   counter = counter + 1;
 });
 
+/* Слайдер */
+
 btnRight.addEventListener("click", (event) => {
   /* Функция реализует перелистывание карточек в блоке озывов */
 
@@ -125,4 +130,11 @@ btnLeft.addEventListener("click", (event) => {
     currentCard = cardArray.length - 1;
     cardArray[currentCard].hidden = false;
   }
+});
+
+/* Меню бургер для телефона */
+
+btnBurger.addEventListener("click", (event) => {
+  event.currentTarget.classList.toggle("active");
+  navList.classList.toggle("active");
 });
