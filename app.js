@@ -85,6 +85,32 @@ seeMore.addEventListener("click", (event) => {
 });
 
 btnRight.addEventListener("click", (event) => {
+  /* Функция реализует перелистывание карточек в блоке озывов */
+
+  /* Переменная будет содержать индекс карточки из массива карточек отзывов
+  которая не скрыта */
+  let currentCard;
+  cardArray.forEach((el) => {
+    if (el.hidden === false) {
+      currentCard = cardArray.indexOf(el);
+    }
+  });
+
+  /* Скрывается текущая карточка */
+  cardArray[currentCard].hidden = true;
+
+  /* Показывается следующаяя карточка (т.к. функция для стрелки направленной
+    в правую сторону) если индекс меньше длинны массива карточек
+    и показывается первая карточка если индекс больше длинны массива  */
+  if (currentCard < cardArray.length - 1) {
+    cardArray[currentCard + 1].hidden = false;
+  } else {
+    currentCard = 0;
+    cardArray[currentCard].hidden = false;
+  }
+});
+
+btnLeft.addEventListener("click", (event) => {
   let currentCard;
   cardArray.forEach((el) => {
     if (el.hidden === false) {
@@ -92,10 +118,11 @@ btnRight.addEventListener("click", (event) => {
     }
   });
   cardArray[currentCard].hidden = true;
-  if (currentCard != cardArray.length - 1) {
-    cardArray[currentCard + 1].hidden = false;
+
+  if (currentCard > 0) {
+    cardArray[currentCard - 1].hidden = false;
   } else {
-    currentCard = 0;
+    currentCard = cardArray.length - 1;
     cardArray[currentCard].hidden = false;
   }
 });
