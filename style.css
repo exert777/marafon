@@ -613,4 +613,21 @@ footer div {
     text-align: center;
     padding: 45px 0 0 0;
   }
+
+  /* about-us-container */
+
+  .about-us-container {
+    flex-direction: column;
+    max-width: 440px;
+  }
+
+  .about-us-container img {
+    /* display: block; */
+    width: 440px;
+    height: 100%;
+  }
+
+  .about-us-text {
+    max-width: 440px;
+  }
 }
